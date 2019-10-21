@@ -1,0 +1,42 @@
+html {
+    background-image: url('../img/illustration.webp');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.centered {
+    top:50%;
+    left: 50%;
+    width: 400px;
+    transform: translate3d(-50%,-50%, 0);
+    position: absolute;
+  }
+
+
+  #intro {
+      text-align: center;
+  }
+
+  #gameplay {
+    text-align: center;
+}
+
+  #fight {
+      margin: auto;
+  }
+
+#button:before {
+    margin-top: -8px;
+}
+
+#button:after {
+    margin-top: -8px;
+}
+
+h3 {
+    line-height: 1.8;
+}
+
+

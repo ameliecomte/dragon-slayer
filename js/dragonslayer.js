@@ -128,7 +128,31 @@ class Enemy extends Character {
     }
 }
 
+/* *************************************** SCRIPT *************************************** */
 
+$("#gameplay").hide()
+
+var selectArmor = document.getElementById("armor");
+RPGUI.set_value(selectArmor, "COPPER");
+
+var selectWeapon = document.getElementById("sword");
+RPGUI.set_value(selectWeapon, "WOOD");
+
+$("form").submit(function (ev) {
+    ev.preventDefault()
+    $("#menu").hide()
+    $("#gameplay").show()
+
+    let init = $(this).serializeArray()
+    game = new Game(init)
+    game.intro()
+})
+
+$("#fight").one('click', function () {
+    $(this).hide()
+    game.gameLoop()
+    game.end()
+})
 
 
 
